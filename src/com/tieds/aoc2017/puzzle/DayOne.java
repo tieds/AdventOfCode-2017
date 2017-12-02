@@ -1,7 +1,7 @@
 package com.tieds.aoc2017.puzzle;
 
 /**
- * Day 1 - Puzzle 1
+ * Day 1
  * http://adventofcode.com/2017/day/1#
  * @author tieds
  *
