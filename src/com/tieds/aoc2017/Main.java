@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.tieds.aoc2017.puzzle.DayFour;
 import com.tieds.aoc2017.puzzle.DayOne;
+import com.tieds.aoc2017.puzzle.DayThree;
 import com.tieds.aoc2017.puzzle.DayTwo;
 
 /**
@@ -16,9 +17,10 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		//call puzzles
-		DayOne.solve();
-		DayTwo.solve();
-		DayFour.solve();
+		//DayOne.solve();
+		//DayTwo.solve();
+		DayThree.solve();
+		//DayFour.solve();
 	}
 
 }
