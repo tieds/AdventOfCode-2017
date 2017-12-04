@@ -35,36 +35,36 @@ public class DayFour {
 			StringTokenizer st = new StringTokenizer(line);
 			boolean validToken = true;
 			boolean validToken2 = true;
-			while(st.hasMoreTokens()){
-				String phrase = st.nextToken();
-				//hack together a sorted version
-				List<String> chars = new ArrayList<String>();
-				String sortedPhrase = "";
-				Iterator i = phrase.chars().iterator();
-				while(i.hasNext()){
-					chars.add(String.valueOf(i.next()));
-				}
-				Collections.sort(chars);
-				for(String c : chars){
-					sortedPhrase += c;
-				}
-				//add to set if doesn't exist
-				if(!phrases.contains(phrase)){
-					phrases.add(phrase);
-				}
-				//exists already
-				else {
-					validToken = false;
-				}
-				//add to set if doesn't exist
-				if(!phrasesSorted.contains(sortedPhrase)){
-					phrasesSorted.add(sortedPhrase);
-				}
-				//exists already
-				else {
-					validToken2 = false;
-				}
-			}
+//			while(st.hasMoreTokens()){
+//				String phrase = st.nextToken();
+//				//hack together a sorted version
+//				List<String> chars = new ArrayList<String>();
+//				String sortedPhrase = "";
+//				Iterator i = phrase.chars().iterator();
+//				while(i.hasNext()){
+//					chars.add(String.valueOf(i.next()));
+//				}
+//				Collections.sort(chars);
+//				for(String c : chars){
+//					sortedPhrase += c;
+//				}
+//				//add to set if doesn't exist
+//				if(!phrases.contains(phrase)){
+//					phrases.add(phrase);
+//				}
+//				//exists already
+//				else {
+//					validToken = false;
+//				}
+//				//add to set if doesn't exist
+//				if(!phrasesSorted.contains(sortedPhrase)){
+//					phrasesSorted.add(sortedPhrase);
+//				}
+//				//exists already
+//				else {
+//					validToken2 = false;
+//				}
+//			}
 			if(validToken){
 				sum1 += 1;
 			}

@@ -31,16 +31,32 @@ public class DayThree {
 		//seed grid with first 2 inputs to get it going in the right direction
 		grid[currentY][currentX] = 1;
 		currentX++;
-		grid[currentY][currentX] = 2;
+		grid[currentY][currentX] = 1;
 		currentY--;
 		int currentDirection = UP;
 		//loop until we get to input
 		int count = 3;
 		while(count <= input){
-			//put current number at current location
-			grid[currentY][currentX] = count;
-			//exit once we reach input
+			//for puzzle 1, put current number at current location
+			//grid[currentY][currentX] = count;	
+			//for puzzle 2, put sum of all adjacent squares
+			int sum = 
+					grid[currentY][currentX+1] +
+					grid[currentY][currentX-1] +
+					grid[currentY+1][currentX] +
+					grid[currentY+1][currentX+1] +
+					grid[currentY+1][currentX-1] +
+					grid[currentY-1][currentX] +
+					grid[currentY-1][currentX+1] +
+					grid[currentY-1][currentX-1];
+			grid[currentY][currentX] = sum;
+			//for puzzle 1 exit once we reach input
 			if(count == input){
+				break;
+			}
+			//for puzzle 2 exit once we exceed input
+			if(sum > input){
+				System.out.println("First value greater than input is: "+sum);
 				break;
 			}
 			//if traveling right, check if cell above has a value - if not, turn
