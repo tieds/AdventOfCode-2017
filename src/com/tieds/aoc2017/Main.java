@@ -2,6 +2,7 @@ package com.tieds.aoc2017;
 
 import java.io.IOException;
 
+import com.tieds.aoc2017.puzzle.DayFour;
 import com.tieds.aoc2017.puzzle.DayOne;
 import com.tieds.aoc2017.puzzle.DayTwo;
 
@@ -17,6 +18,7 @@ public class Main {
 		//call puzzles
 		DayOne.solve();
 		DayTwo.solve();
+		DayFour.solve();
 	}
 
 }
